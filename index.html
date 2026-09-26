@@ -1073,7 +1073,8 @@
         // Listen for sidebar toggle click
         sidebarToggleBtn.addEventListener('click', () => {
             if (window.innerWidth < 768) {
-                // Mobile: toggle visibility
+                // Mobile: remove collapsed state ensure it opens full width, then toggle visibility
+                sidebar.classList.remove('sidebar-collapsed');
                 sidebar.classList.toggle('-translate-x-full');
             } else {
                 // Desktop: toggle collapsed state
