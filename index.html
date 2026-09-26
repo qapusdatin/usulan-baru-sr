@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SETARA - Sistem Edukasi Terpadu Sekolah Rakyat</title>
-
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/apple-touch-icon.png" />
@@ -96,7 +95,7 @@
         }
     </style>
 </head>
-<body class="bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 h-screen w-screen overflow-hidden flex font-sans transition-colors duration-300">
+<body class="bg-[#F8FAFC] dark:bg-slate-900 text-slate-800 dark:text-slate-100 h-screen w-screen overflow-hidden flex font-sans transition-colors duration-300">
 
     <!-- Left Sidebar -->
     <aside id="sidebar" class="w-[260px] lg:w-[280px] h-full flex flex-col border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shrink-0 z-20 transition-colors duration-300 overflow-hidden">
@@ -144,18 +143,17 @@
                 <h3 class="text-[11px] font-bold text-slate-500 dark:text-slate-400 mb-2 px-3 tracking-wider uppercase hide-on-collapse">Data Pokok</h3>
                 <ul class="space-y-0.5">
                     <li>
-                        <!-- Menu Induk TIDAK AKTIF (Default) -->
-                        <a href="#" id="menu-sekolah-rakyat" class="menu-item flex items-center justify-between px-3 py-2.5 text-gray-700 hover:bg-gray-100 rounded-xl font-medium transition-colors cursor-pointer">
+                        <!-- Menu Induk AKTIF -->
+                        <a href="#" id="menu-sekolah-rakyat" class="menu-item flex items-center justify-between px-3 py-2.5 text-brand-blue dark:text-blue-400 bg-brand-lightblue dark:bg-slate-800 rounded-xl font-medium transition-colors cursor-pointer">
                             <div class="menu-item-wrapper flex items-center gap-3">
                                 <i class="menu-item-icon ph ph-buildings text-lg"></i>
                                 <span class="text-sm hide-on-collapse">Sekolah Rakyat</span>
                             </div>
-                            <!-- Hapus rotate-180 agar panah menghadap ke bawah -->
-                            <i id="icon-sekolah-rakyat" class="ph ph-caret-down text-xs hide-on-collapse transition-transform duration-300"></i>
+                            <i id="icon-sekolah-rakyat" class="ph ph-caret-down text-xs hide-on-collapse transition-transform duration-300 rotate-180"></i>
                         </a>
                         
-                        <!-- Submenu Container (Default: hidden) -->
-                        <ul id="submenu-sekolah-rakyat" class="mt-1 space-y-1 pl-4 hide-on-collapse hidden">
+                        <!-- Submenu Container -->
+                        <ul id="submenu-sekolah-rakyat" class="mt-1 space-y-1 pl-4 hide-on-collapse">
                             <li>
                                 <a href="#" class="flex items-center gap-3 px-3 py-2 text-slate-500 dark:text-slate-400 hover:text-brand-blue hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors font-medium text-[13px]">
                                     <div class="w-1.5 h-1.5 rounded-full border border-slate-400 dark:border-slate-500"></div>
@@ -169,8 +167,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="flex items-center gap-3 px-3 py-2 text-slate-500 dark:text-slate-400 hover:text-brand-blue hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors font-medium text-[13px]">
-                                    <div class="w-1.5 h-1.5 rounded-full border border-slate-400 dark:border-slate-500"></div>
+                                <a href="#" class="flex items-center gap-3 px-3 py-2 text-brand-blue dark:text-blue-400 bg-slate-50 dark:bg-slate-800 rounded-lg transition-colors font-medium text-[13px]">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-brand-blue dark:bg-blue-400"></div>
                                     <span>Usulan Baru SR</span>
                                 </a>
                             </li>
@@ -393,7 +391,7 @@
     </aside>
 
     <!-- Main Content Area -->
-    <main class="flex-1 flex flex-col h-full bg-white dark:bg-slate-900 relative transition-colors duration-300">
+    <main class="flex-1 flex flex-col h-full bg-[#F8FAFC] dark:bg-slate-900 relative transition-colors duration-300">
         
         <!-- Header -->
         <header class="h-[60px] flex items-center justify-between px-6 border-b border-slate-200 dark:border-slate-800 shrink-0 bg-white dark:bg-slate-900 z-40 sticky top-0 transition-colors duration-300">
@@ -483,385 +481,218 @@
 
         <!-- Scrollable Content -->
         <div class="flex-1 overflow-y-auto p-4 md:p-8 scroll-smooth" id="main-scroll">
-            <div class="max-w-[1200px] mx-auto space-y-8">
+            <div class="max-w-[1100px] mx-auto space-y-6">
                 
-                <!-- Hero Banner -->
-                <div class="bg-brand-herobg dark:bg-slate-800 rounded-2xl p-6 md:p-8 relative overflow-hidden flex flex-col md:flex-row justify-between items-center md:items-start min-h-[200px] border border-blue-50 dark:border-slate-700 transition-colors duration-300">
-                    
-                    <div class="z-10 w-full md:w-2/3 mb-6 md:mb-0">
-                        <div class="flex items-center space-x-3 mb-3">
-                            <div class="w-8 h-8 rounded-full bg-brand-blue text-white flex items-center justify-center font-semibold text-xs shadow-sm">UH</div>
-                            <span class="text-brand-blue dark:text-blue-400 font-semibold text-sm">Selamat datang kembali, Ujang Taofik Hidayat!</span>
-                        </div>
-                        <h1 class="text-3xl md:text-4xl font-bold text-brand-blue dark:text-blue-400 mb-2">Dashboard Sekolah Rakyat</h1>
-                        <p class="text-brand-blue/70 dark:text-blue-400/70 text-sm md:text-base">Ringkasan data sekolah rakyat dan statistik terkini</p>
+                <!-- Breadcrumb -->
+                <nav class="flex items-center space-x-2 text-sm text-slate-500 dark:text-slate-400 mt-1">
+                    <a href="#" class="hover:text-slate-800 dark:hover:text-white transition-colors">Dashboard</a>
+                    <i class="ph ph-caret-right text-xs"></i>
+                    <a href="#" class="hover:text-slate-800 dark:hover:text-white transition-colors">Data Pokok</a>
+                    <i class="ph ph-caret-right text-xs"></i>
+                    <a href="#" class="hover:text-slate-800 dark:hover:text-white transition-colors">Sekolah Rakyat</a>
+                    <i class="ph ph-caret-right text-xs"></i>
+                    <span class="text-slate-700 dark:text-slate-300 font-medium">Usulan Baru SR</span>
+                </nav>
+
+                <!-- Page Banner Heading (Desain baru mengikuti referensi header.pdf) -->
+                <div class="bg-brand-lightblue dark:bg-slate-800 rounded-2xl p-6 md:p-8 relative overflow-hidden flex justify-between items-center h-[120px] mb-6">
+                    <div class="z-10 w-full md:w-2/3">
+                        <h1 class="text-xl md:text-2xl font-bold text-slate-800 dark:text-slate-100 mb-1">Usulan Baru SR</h1>
+                        <p class="text-slate-600 dark:text-slate-400 text-xs md:text-sm">Input Data/Dokumen Usulan Baru Sekolah Rakyat</p>
                     </div>
-
-                    <!-- CSS Illustration representing school elements -->
-                    <div class="relative w-full md:w-1/3 h-[150px] flex items-end justify-end pointer-events-none">
-                        
-                        <!-- Floating particles -->
-                        <div class="absolute top-4 left-10 w-2 h-2 rounded-full bg-yellow-400"></div>
-                        <div class="absolute top-10 right-20 w-2 h-2 rounded-full bg-blue-300"></div>
-                        <div class="absolute bottom-10 left-20 w-1.5 h-1.5 rounded-full bg-green-400"></div>
-
-                        <!-- Cap -->
-                        <div class="absolute top-8 left-4 text-emerald-400 rotate-[-15deg]">
-                            <i class="ph-fill ph-graduation-cap text-4xl drop-shadow-sm"></i>
-                        </div>
-
-                        <!-- Books -->
-                        <div class="absolute bottom-0 right-0 flex flex-col items-center">
-                            <div class="w-10 h-2 bg-red-400 rounded-sm mb-[2px]"></div>
-                            <div class="w-12 h-3 bg-yellow-400 rounded-sm mb-[2px]"></div>
-                            <div class="w-14 h-4 bg-cyan-400 rounded-sm"></div>
-                        </div>
-
-                        <!-- Main Building -->
-                        <div class="relative flex flex-col items-center bottom-0 mr-16">
-                            <!-- Flag -->
-                            <div class="absolute -top-10 left-1/2 ml-6">
-                                <div class="w-0.5 h-12 bg-brand-blue dark:bg-blue-500 relative">
-                                    <div class="absolute top-0 right-full w-5 h-3 bg-blue-300" style="clip-path: polygon(100% 0, 100% 100%, 0 50%); right: 0;"></div>
-                                </div>
-                            </div>
-                            <!-- Roof -->
-                            <div class="w-0 h-0 border-l-[70px] border-l-transparent border-r-[70px] border-r-transparent border-b-[50px] border-b-brand-blue dark:border-b-blue-500 relative z-10"></div>
-                            <!-- Body -->
-                            <div class="w-[120px] h-[60px] bg-brand-blue dark:bg-blue-500 relative flex justify-center items-end">
-                                <!-- Windows -->
-                                <div class="absolute top-2 left-3 grid grid-cols-2 gap-1"><div class="w-2.5 h-3 bg-[#F4F7FF] dark:bg-slate-800 rounded-[1px]"></div><div class="w-2.5 h-3 bg-[#F4F7FF] dark:bg-slate-800 rounded-[1px]"></div><div class="w-2.5 h-3 bg-[#F4F7FF] dark:bg-slate-800 rounded-[1px]"></div><div class="w-2.5 h-3 bg-[#F4F7FF] dark:bg-slate-800 rounded-[1px]"></div></div>
-                                <div class="absolute top-2 right-3 grid grid-cols-2 gap-1"><div class="w-2.5 h-3 bg-[#F4F7FF] dark:bg-slate-800 rounded-[1px]"></div><div class="w-2.5 h-3 bg-[#F4F7FF] dark:bg-slate-800 rounded-[1px]"></div><div class="w-2.5 h-3 bg-[#F4F7FF] dark:bg-slate-800 rounded-[1px]"></div><div class="w-2.5 h-3 bg-[#F4F7FF] dark:bg-slate-800 rounded-[1px]"></div></div>
-                                <!-- Door -->
-                                <div class="w-6 h-10 bg-[#F4F7FF] dark:bg-slate-800 rounded-t-md relative">
-                                    <div class="w-1 h-1 rounded-full bg-brand-blue dark:bg-blue-500 absolute right-1 top-1/2 -translate-y-1/2"></div>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Right Side Illustration -->
+                    <div class="absolute right-0 top-0 bottom-0 flex items-center justify-end pr-4 md:pr-12 pointer-events-none">
+                        <img src="assets/page-heading-bg-CQ5hWW4s.png" alt="Decoration" class="h-full object-contain max-h-[140px] transform translate-y-2 scale-110">
                     </div>
                 </div>
 
-                <!-- Tabs -->
-                <div class="border-b border-slate-200 dark:border-slate-800 relative">
-                    <div class="flex space-x-6 overflow-x-auto no-scrollbar pb-[1px]">
-                        <button class="flex items-center space-x-2 text-brand-blue dark:text-blue-400 font-semibold pb-3 border-b-2 border-brand-blue dark:border-blue-400 whitespace-nowrap">
-                            <i class="ph ph-check-circle text-lg"></i><span>Ringkasan</span>
-                        </button>
-                        <button class="flex items-center space-x-2 text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-100 font-medium pb-3 border-b-2 border-transparent whitespace-nowrap transition-colors">
-                            <i class="ph ph-buildings text-lg"></i><span>Rekap Sekolah</span>
-                        </button>
-                        <button class="flex items-center space-x-2 text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-100 font-medium pb-3 border-b-2 border-transparent whitespace-nowrap transition-colors">
-                            <i class="ph ph-users text-lg"></i><span>Rekap Peserta Didik</span>
-                        </button>
-                        <button class="flex items-center space-x-2 text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-100 font-medium pb-3 border-b-2 border-transparent whitespace-nowrap transition-colors">
-                            <i class="ph ph-graduation-cap text-lg"></i><span>Rekap Guru</span>
-                        </button>
-                        <button class="flex items-center space-x-2 text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-100 font-medium pb-3 border-b-2 border-transparent whitespace-nowrap transition-colors">
-                            <i class="ph ph-users-three text-lg"></i><span>Rekap Tendik</span>
-                        </button>
-                        <button class="flex items-center space-x-2 text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-100 font-medium pb-3 border-b-2 border-transparent whitespace-nowrap transition-colors">
-                            <i class="ph ph-briefcase text-lg"></i><span>Usulan Lok</span>
-                        </button>
-                    </div>
-                    <!-- Overflow indicator -->
-                    <div class="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-white dark:from-slate-900 to-transparent flex items-start justify-end pt-1 pointer-events-none hidden sm:block">
-                        <i class="ph ph-caret-right text-slate-400 dark:text-slate-500"></i>
-                    </div>
-                </div>
-
-                <!-- Peta Sebaran Banner -->
-                <div class="border border-slate-200 dark:border-slate-700 rounded-xl p-4 md:p-6 flex items-center justify-between shadow-sm bg-white dark:bg-slate-800 transition-colors duration-300">
-                    <h2 class="text-base md:text-lg font-bold text-slate-800 dark:text-slate-100">Peta Sebaran Sekolah Rakyat</h2>
-                    <button class="bg-brand-lightblue dark:bg-slate-700 text-brand-blue dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-slate-600 transition-colors px-3 py-1.5 md:px-4 md:py-2 rounded-lg flex items-center space-x-2 text-sm font-semibold">
-                        <span class="hidden sm:inline">Tampilkan</span>
-                        <i class="ph ph-caret-down"></i>
-                    </button>
-                </div>
-
-                <!-- Statistik Utama -->
-                <section>
-                    <h3 class="text-[11px] font-bold text-brand-blue dark:text-blue-400 uppercase tracking-wider mb-1">RINGKASAN</h3>
-                    <h2 class="text-lg font-bold text-slate-800 dark:text-slate-100 mb-4">Statistik Utama Sekolah Rakyat</h2>
+                <!-- Form Section -->
+                <form class="space-y-6">
                     
-                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                        <div class="h-28 border border-slate-100 dark:border-slate-700 rounded-xl bg-blue-50/50 dark:bg-slate-800/50 flex flex-col items-center justify-center relative overflow-hidden group hover:shadow-md transition">
-                            <div class="absolute -bottom-4 -right-4 w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full opacity-50 group-hover:scale-150 transition duration-500"></div>
-                            <i class="ph ph-buildings text-3xl text-blue-500 z-10 mb-1"></i>
-                            <span class="text-xs font-medium text-slate-500 dark:text-slate-400 z-10">Sekolah</span>
+                    <!-- Card: DATA PENGUSUL -->
+                    <div class="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm p-6 space-y-6">
+                        <div class="border-b border-slate-100 dark:border-slate-700 pb-3">
+                            <h2 class="text-sm font-bold uppercase tracking-wider text-slate-700 dark:text-slate-200">DATA PENGUSUL</h2>
                         </div>
-                        <div class="h-28 border border-slate-100 dark:border-slate-700 rounded-xl bg-amber-50/50 dark:bg-slate-800/50 flex flex-col items-center justify-center relative overflow-hidden group hover:shadow-md transition">
-                            <div class="absolute -bottom-4 -right-4 w-16 h-16 bg-amber-100 dark:bg-amber-900/30 rounded-full opacity-50 group-hover:scale-150 transition duration-500"></div>
-                            <i class="ph ph-users text-3xl text-amber-500 z-10 mb-1"></i>
-                            <span class="text-xs font-medium text-slate-500 dark:text-slate-400 z-10">Peserta Didik</span>
-                        </div>
-                        <div class="h-28 border border-slate-100 dark:border-slate-700 rounded-xl bg-cyan-50/50 dark:bg-slate-800/50 flex flex-col items-center justify-center relative overflow-hidden group hover:shadow-md transition">
-                            <div class="absolute -bottom-4 -right-4 w-16 h-16 bg-cyan-100 dark:bg-cyan-900/30 rounded-full opacity-50 group-hover:scale-150 transition duration-500"></div>
-                            <i class="ph ph-graduation-cap text-3xl text-cyan-600 z-10 mb-1"></i>
-                            <span class="text-xs font-medium text-slate-500 dark:text-slate-400 z-10">Guru</span>
-                        </div>
-                        <div class="h-28 border border-slate-100 dark:border-slate-700 rounded-xl bg-orange-50/50 dark:bg-slate-800/50 flex flex-col items-center justify-center relative overflow-hidden group hover:shadow-md transition">
-                            <div class="absolute -bottom-4 -right-4 w-16 h-16 bg-orange-100 dark:bg-orange-900/30 rounded-full opacity-50 group-hover:scale-150 transition duration-500"></div>
-                            <i class="ph ph-users-three text-3xl text-orange-500 z-10 mb-1"></i>
-                            <span class="text-xs font-medium text-slate-500 dark:text-slate-400 z-10">Tendik</span>
-                        </div>
-                        <div class="h-28 border border-slate-100 dark:border-slate-700 rounded-xl bg-blue-50/50 dark:bg-slate-800/50 flex flex-col items-center justify-center relative overflow-hidden group hover:shadow-md transition hidden lg:flex">
-                            <div class="absolute -bottom-4 -right-4 w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full opacity-50 group-hover:scale-150 transition duration-500"></div>
-                            <i class="ph ph-map-pin text-3xl text-blue-500 z-10 mb-1"></i>
-                            <span class="text-xs font-medium text-slate-500 dark:text-slate-400 z-10">Lokasi</span>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Komposisi Jenis Kelamin -->
-                <section>
-                    <h3 class="text-[11px] font-bold text-brand-blue dark:text-blue-400 uppercase tracking-wider mb-1 mt-6">KOMPOSISI JENIS KELAMIN</h3>
-                    <h2 class="text-lg font-bold text-slate-800 dark:text-slate-100 mb-4">Jenis Kelamin</h2>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                         
-                        <!-- Chart Card 1 -->
-                        <div class="border border-slate-200 dark:border-slate-700 rounded-xl p-6 bg-white dark:bg-slate-800 shadow-sm hover:shadow-md transition flex flex-col">
-                            <div class="flex justify-between items-start mb-6">
-                                <div>
-                                    <h4 class="font-bold text-slate-800 dark:text-slate-100">Jenis Kelamin Peserta Didik</h4>
-                                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Sumber data: Jamsos</p>
-                                </div>
-                                <i class="ph ph-users text-blue-500 text-xl"></i>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Pengusul -->
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-2">Pengusul</label>
+                                <input type="text" placeholder="Nama pengusul / instansi" class="w-full px-3.5 py-2.5 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-brand-blue">
                             </div>
-                            <div class="relative flex-1 flex justify-center items-center h-48 w-full mx-auto">
-                                <canvas id="chartPeserta"></canvas>
-                                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                    <span class="text-2xl font-bold text-slate-800 dark:text-slate-100">36.097</span>
-                                </div>
-                            </div>
-                            <div class="mt-4 flex flex-col space-y-1.5 text-xs">
-                                <div class="flex items-center space-x-2">
-                                    <div class="w-3 h-3 rounded bg-brand-cyan"></div>
-                                    <span class="text-slate-600 dark:text-slate-300">Laki-laki: <strong class="text-slate-800 dark:text-slate-100">18.304</strong></span>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <div class="w-3 h-3 rounded bg-brand-pink"></div>
-                                    <span class="text-slate-600 dark:text-slate-300">Perempuan: <strong class="text-slate-800 dark:text-slate-100">17.793</strong></span>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- Chart Card 2 -->
-                        <div class="border border-slate-200 dark:border-slate-700 rounded-xl p-6 bg-white dark:bg-slate-800 shadow-sm hover:shadow-md transition flex flex-col">
-                            <div class="flex justify-between items-start mb-6">
-                                <div>
-                                    <h4 class="font-bold text-slate-800 dark:text-slate-100">Jenis Kelamin Guru</h4>
-                                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Sumber data: Pusdiklat</p>
-                                </div>
-                                <i class="ph ph-user-circle-plus text-blue-500 text-xl"></i>
+                            <!-- Alamat Lahan -->
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-2">Alamat Lahan</label>
+                                <input type="text" placeholder="Alamat lengkap lokasi lahan" class="w-full px-3.5 py-2.5 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-brand-blue">
                             </div>
-                            <div class="relative flex-1 flex justify-center items-center h-48 w-full mx-auto">
-                                <canvas id="chartGuru"></canvas>
-                                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                    <span class="text-2xl font-bold text-slate-800 dark:text-slate-100">2.581</span>
-                                </div>
-                            </div>
-                            <div class="mt-4 flex flex-col space-y-1.5 text-xs">
-                                <div class="flex items-center space-x-2">
-                                    <div class="w-3 h-3 rounded bg-brand-cyan"></div>
-                                    <span class="text-slate-600 dark:text-slate-300">Laki-laki: <strong class="text-slate-800 dark:text-slate-100">842</strong></span>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <div class="w-3 h-3 rounded bg-brand-pink"></div>
-                                    <span class="text-slate-600 dark:text-slate-300">Perempuan: <strong class="text-slate-800 dark:text-slate-100">1.739</strong></span>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- Chart Card 3 -->
-                        <div class="border border-slate-200 dark:border-slate-700 rounded-xl p-6 bg-white dark:bg-slate-800 shadow-sm hover:shadow-md transition flex flex-col">
-                            <div class="flex justify-between items-start mb-6">
-                                <div>
-                                    <h4 class="font-bold text-slate-800 dark:text-slate-100">Jenis Kelamin Tendik</h4>
-                                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Sumber data: Pusdiklat</p>
-                                </div>
-                                <i class="ph ph-users-three text-orange-500 text-xl"></i>
-                            </div>
-                            <div class="relative flex-1 flex justify-center items-center h-48 w-full mx-auto">
-                                <canvas id="chartTendik"></canvas>
-                                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                    <span class="text-2xl font-bold text-slate-800 dark:text-slate-100">10.908</span>
-                                </div>
-                            </div>
-                            <div class="mt-4 flex flex-col space-y-1.5 text-xs">
-                                <div class="flex items-center space-x-2">
-                                    <div class="w-3 h-3 rounded bg-brand-cyan"></div>
-                                    <span class="text-slate-600 dark:text-slate-300">Laki-laki: <strong class="text-slate-800 dark:text-slate-100">6.362</strong></span>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <div class="w-3 h-3 rounded bg-brand-pink"></div>
-                                    <span class="text-slate-600 dark:text-slate-300">Perempuan: <strong class="text-slate-800 dark:text-slate-100">4.249</strong></span>
+                            <!-- Wilayah (Provinsi, Kab/Kota, Kecamatan) -->
+                            <div class="md:col-span-2">
+                                <label class="block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-2">Wilayah</label>
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                    <select class="w-full px-3.5 py-2.5 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-lg text-sm text-slate-500 dark:text-slate-300 focus:outline-none focus:ring-1 focus:ring-brand-blue">
+                                        <option value="">Pilih Provinsi</option>
+                                    </select>
+                                    <select class="w-full px-3.5 py-2.5 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-lg text-sm text-slate-500 dark:text-slate-300 focus:outline-none focus:ring-1 focus:ring-brand-blue">
+                                        <option value="">Pilih Kab/Kota</option>
+                                    </select>
+                                    <select class="w-full px-3.5 py-2.5 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-lg text-sm text-slate-500 dark:text-slate-300 focus:outline-none focus:ring-1 focus:ring-brand-blue">
+                                        <option value="">Pilih Kecamatan</option>
+                                    </select>
                                 </div>
                             </div>
-                        </div>
 
-                    </div>
-                </section>
+                            <!-- Luas Lahan -->
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-2">Luas Lahan</label>
+                                <div class="relative flex items-center">
+                                    <input type="number" placeholder="0" class="w-full pl-3.5 pr-12 py-2.5 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-brand-blue">
+                                    <span class="absolute right-3.5 text-xs text-slate-400 font-medium pointer-events-none">m²</span>
+                                </div>
+                            </div>
 
-                <!-- Rasio -->
-                <section>
-                    <h3 class="text-[11px] font-bold text-brand-blue dark:text-blue-400 uppercase tracking-wider mb-1 mt-6">RASIO</h3>
-                    <h2 class="text-lg font-bold text-slate-800 dark:text-slate-100 mb-4">Perbandingan Kunci</h2>
-                    
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                        <div class="bg-[#F0F5FF] dark:bg-slate-800 rounded-xl p-6 text-center border border-blue-100 dark:border-slate-700 flex flex-col items-center justify-center hover:-translate-y-1 transition duration-300">
-                            <i class="ph ph-chart-bar text-brand-blue dark:text-blue-400 text-2xl mb-2"></i>
-                            <h4 class="text-sm font-semibold text-brand-blue dark:text-blue-400 mb-1">Sekolah per Provinsi</h4>
-                            <span class="text-4xl font-bold text-brand-blue dark:text-blue-400 mb-2">5.4</span>
-                            <p class="text-[10px] text-brand-blue/70 dark:text-blue-400/70">Rata-rata sekolah per provinsi</p>
-                        </div>
-                        <div class="bg-[#E6F6F6] dark:bg-slate-800 rounded-xl p-6 text-center border border-teal-100 dark:border-slate-700 flex flex-col items-center justify-center hover:-translate-y-1 transition duration-300">
-                            <i class="ph ph-users text-teal-600 dark:text-teal-400 text-2xl mb-2"></i>
-                            <h4 class="text-sm font-semibold text-teal-600 dark:text-teal-400 mb-1">Siswa per Sekolah</h4>
-                            <span class="text-4xl font-bold text-teal-600 dark:text-teal-400 mb-2">198</span>
-                            <p class="text-[10px] text-teal-600/70 dark:text-teal-400/70">Rata-rata siswa per sekolah</p>
-                        </div>
-                        <div class="bg-[#FEF5E7] dark:bg-slate-800 rounded-xl p-6 text-center border border-orange-100 dark:border-slate-700 flex flex-col items-center justify-center hover:-translate-y-1 transition duration-300">
-                            <i class="ph ph-user text-orange-600 dark:text-orange-400 text-2xl mb-2"></i>
-                            <h4 class="text-sm font-semibold text-orange-600 dark:text-orange-400 mb-1">Siswa per Guru</h4>
-                            <span class="text-4xl font-bold text-orange-600 dark:text-orange-400 mb-2">14:1</span>
-                            <p class="text-[10px] text-orange-600/70 dark:text-orange-400/70">Rasio siswa terhadap guru</p>
-                        </div>
-                        <div class="bg-[#E6F9F0] dark:bg-slate-800 rounded-xl p-6 text-center border border-emerald-100 dark:border-slate-700 flex flex-col items-center justify-center hover:-translate-y-1 transition duration-300">
-                            <i class="ph ph-buildings text-emerald-600 dark:text-emerald-400 text-2xl mb-2"></i>
-                            <h4 class="text-sm font-semibold text-emerald-600 dark:text-emerald-400 mb-1">Guru per Sekolah</h4>
-                            <span class="text-4xl font-bold text-emerald-600 dark:text-emerald-400 mb-2">14.2</span>
-                            <p class="text-[10px] text-emerald-600/70 dark:text-emerald-400/70">Rata-rata guru per sekolah</p>
+                            <!-- PIC (Nama & Kontak) -->
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-2">PIC</label>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                    <input type="text" placeholder="Nama PIC" class="w-full px-3.5 py-2.5 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-brand-blue">
+                                    <div class="relative flex items-center">
+                                        <span class="absolute left-3 text-xs text-slate-400 font-medium pointer-events-none">+62</span>
+                                        <input type="tel" placeholder="No. HP" class="w-full pl-10 pr-3.5 py-2.5 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-brand-blue">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </section>
 
-                <!-- Top 10 Provinsi -->
-                <section>
-                    <h3 class="text-[11px] font-bold text-brand-blue dark:text-blue-400 uppercase tracking-wider mb-1 mt-6">TOP 10 PROVINSI</h3>
-                    <h2 class="text-lg font-bold text-slate-800 dark:text-slate-100 mb-4">Sebaran Sekolah, Siswa, Guru & Tendik</h2>
-                    
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- Card: JENIS USULAN -->
+                    <div class="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm p-6 space-y-4">
+                        <div class="border-b border-slate-100 dark:border-slate-700 pb-3">
+                            <h2 class="text-sm font-bold uppercase tracking-wider text-slate-700 dark:text-slate-200">JENIS USULAN</h2>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
+                            <label class="flex items-center space-x-3 p-4 border border-blue-500 bg-blue-50/40 dark:bg-slate-700/50 rounded-xl cursor-pointer transition">
+                                <input type="radio" name="jenis_usulan" value="baru" checked class="w-4 h-4 text-brand-blue focus:ring-brand-blue border-slate-300">
+                                <span class="text-sm font-semibold text-slate-800 dark:text-slate-100">USULAN BARU</span>
+                            </label>
+                            <label class="flex items-center space-x-3 p-4 border border-slate-200 dark:border-slate-600 rounded-xl cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700/30 transition">
+                                <input type="radio" name="jenis_usulan" value="perubahan" class="w-4 h-4 text-brand-blue focus:ring-brand-blue border-slate-300">
+                                <span class="text-sm font-semibold text-slate-800 dark:text-slate-100">USULAN PERUBAHAN</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Card: DOKUMEN UTAMA -->
+                    <div class="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm p-6 space-y-4">
+                        <div class="border-b border-slate-100 dark:border-slate-700 pb-3">
+                            <h2 class="text-sm font-bold uppercase tracking-wider text-slate-700 dark:text-slate-200">DOKUMEN UTAMA</h2>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-1">
+                            <!-- Surat Pengantar -->
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-2">Surat Pengantar</label>
+                                <input type="file" class="block w-full text-xs text-slate-500 file:mr-3 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-medium file:bg-slate-100 file:text-slate-700 hover:file:bg-slate-200 dark:file:bg-slate-700 dark:file:text-slate-200 border border-slate-200 dark:border-slate-600 rounded-lg p-1.5 cursor-pointer">
+                            </div>
+                            <!-- Proposal -->
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-2">Proposal</label>
+                                <input type="file" class="block w-full text-xs text-slate-500 file:mr-3 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-medium file:bg-slate-100 file:text-slate-700 hover:file:bg-slate-200 dark:file:bg-slate-700 dark:file:text-slate-200 border border-slate-200 dark:border-slate-600 rounded-lg p-1.5 cursor-pointer">
+                            </div>
+                            <!-- Sertifikat -->
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-2">Sertifikat</label>
+                                <input type="file" class="block w-full text-xs text-slate-500 file:mr-3 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-medium file:bg-slate-100 file:text-slate-700 hover:file:bg-slate-200 dark:file:bg-slate-700 dark:file:text-slate-200 border border-slate-200 dark:border-slate-600 rounded-lg p-1.5 cursor-pointer">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card: READINESS CRITERIA -->
+                    <div class="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm p-6 space-y-4">
+                        <div class="border-b border-slate-100 dark:border-slate-700 pb-3">
+                            <h2 class="text-sm font-bold uppercase tracking-wider text-slate-700 dark:text-slate-200">READINESS CRITERIA</h2>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-1">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-2">Suket Lahan</label>
+                                <input type="file" class="block w-full text-xs text-slate-500 file:mr-3 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-medium file:bg-slate-100 file:text-slate-700 hover:file:bg-slate-200 dark:file:bg-slate-700 dark:file:text-slate-200 border border-slate-200 dark:border-slate-600 rounded-lg p-1.5 cursor-pointer">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-2">KRK / KKPR</label>
+                                <input type="file" class="block w-full text-xs text-slate-500 file:mr-3 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-medium file:bg-slate-100 file:text-slate-700 hover:file:bg-slate-200 dark:file:bg-slate-700 dark:file:text-slate-200 border border-slate-200 dark:border-slate-600 rounded-lg p-1.5 cursor-pointer">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-2">PBG</label>
+                                <input type="file" class="block w-full text-xs text-slate-500 file:mr-3 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-medium file:bg-slate-100 file:text-slate-700 hover:file:bg-slate-200 dark:file:bg-slate-700 dark:file:text-slate-200 border border-slate-200 dark:border-slate-600 rounded-lg p-1.5 cursor-pointer">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-2">Amdal / UKL-UPL</label>
+                                <input type="file" class="block w-full text-xs text-slate-500 file:mr-3 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-medium file:bg-slate-100 file:text-slate-700 hover:file:bg-slate-200 dark:file:bg-slate-700 dark:file:text-slate-200 border border-slate-200 dark:border-slate-600 rounded-lg p-1.5 cursor-pointer">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-2">Andalalin</label>
+                                <input type="file" class="block w-full text-xs text-slate-500 file:mr-3 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-medium file:bg-slate-100 file:text-slate-700 hover:file:bg-slate-200 dark:file:bg-slate-700 dark:file:text-slate-200 border border-slate-200 dark:border-slate-600 rounded-lg p-1.5 cursor-pointer">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card: DESKRIPSI LAHAN -->
+                    <div class="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm p-6 space-y-5">
+                        <div class="border-b border-slate-100 dark:border-slate-700 pb-3">
+                            <h2 class="text-sm font-bold uppercase tracking-wider text-slate-700 dark:text-slate-200">DESKRIPSI LAHAN</h2>
+                            <p class="text-xs text-slate-400 mt-0.5">Sarana & Prasarana yang tersedia</p>
+                        </div>
                         
-                        <!-- Top 10 Sekolah -->
-                        <div class="border border-slate-200 dark:border-slate-700 rounded-xl p-6 bg-white dark:bg-slate-800 shadow-sm hover:shadow-md transition">
-                            <div class="flex justify-between items-start mb-6">
-                                <div>
-                                    <h4 class="font-bold text-slate-800 dark:text-slate-100">Jumlah Sekolah (Top 10)</h4>
-                                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Sebaran sekolah rakyat per provinsi</p>
-                                </div>
-                                <i class="ph ph-buildings text-blue-400 text-xl"></i>
+                        <div class="space-y-4 pt-1">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-1.5">Air</label>
+                                <input type="text" placeholder="Ketersediaan sumber air, jaringan air bersih, dll." class="w-full px-3.5 py-2.5 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-brand-blue">
                             </div>
-                            
-                            <div class="space-y-3 mt-4 text-xs relative pb-6 border-b border-l border-slate-100 dark:border-slate-700 pl-2">
-                                <div class="absolute bottom-0 left-2 right-0 flex justify-between text-[10px] text-slate-400 dark:text-slate-500 pt-1 border-t border-slate-200 dark:border-slate-700">
-                                    <span>0</span><span>10</span><span>20</span><span>30</span>
-                                </div>
-                                
-                                <div class="flex items-center"><span class="w-24 text-right pr-3 font-medium text-slate-600 dark:text-slate-300 uppercase">JAWA TIMUR</span><div class="flex-1 flex items-center"><div class="h-4 bg-brand-cyan hover:bg-blue-600 transition-colors rounded-sm" style="width: 96%"></div><span class="ml-2 font-bold text-slate-800 dark:text-slate-100">29</span></div></div>
-                                <div class="flex items-center"><span class="w-24 text-right pr-3 font-medium text-slate-600 dark:text-slate-300 uppercase">JAWA BARAT</span><div class="flex-1 flex items-center"><div class="h-4 bg-brand-cyan hover:bg-blue-600 transition-colors rounded-sm" style="width: 80%"></div><span class="ml-2 font-bold text-slate-800 dark:text-slate-100">24</span></div></div>
-                                <div class="flex items-center"><span class="w-24 text-right pr-3 font-medium text-slate-600 dark:text-slate-300 uppercase">JAWA TENGAH</span><div class="flex-1 flex items-center"><div class="h-4 bg-brand-cyan hover:bg-blue-600 transition-colors rounded-sm" style="width: 53%"></div><span class="ml-2 font-bold text-slate-800 dark:text-slate-100">16</span></div></div>
-                                <div class="flex items-center"><span class="w-24 text-right pr-3 font-medium text-slate-600 dark:text-slate-300 uppercase truncate" title="SULAWESI SELATAN">SULAWESI...</span><div class="flex-1 flex items-center"><div class="h-4 bg-brand-cyan hover:bg-blue-600 transition-colors rounded-sm" style="width: 46%"></div><span class="ml-2 font-bold text-slate-800 dark:text-slate-100">14</span></div></div>
-                                <div class="flex items-center"><span class="w-24 text-right pr-3 font-medium text-slate-600 dark:text-slate-300 uppercase">ACEH</span><div class="flex-1 flex items-center"><div class="h-4 bg-brand-cyan hover:bg-blue-600 transition-colors rounded-sm" style="width: 30%"></div><span class="ml-2 font-bold text-slate-800 dark:text-slate-100">9</span></div></div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-1.5">Listrik</label>
+                                <input type="text" placeholder="Kapasitas daya, jaringan PLN, dll." class="w-full px-3.5 py-2.5 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-brand-blue">
                             </div>
-                            <div class="text-center mt-4 flex items-center justify-center text-xs text-slate-500 dark:text-slate-400">
-                                <div class="w-2 h-2 rounded-full bg-brand-cyan mr-1.5"></div> Sekolah
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-1.5">Fasum</label>
+                                <input type="text" placeholder="Fasilitas umum yang tersedia di sekitar lahan, dll." class="w-full px-3.5 py-2.5 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-brand-blue">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-1.5">Akses Jalan</label>
+                                <input type="text" placeholder="Kondisi jalan, lebar akses, jenis perkerasan, dll." class="w-full px-3.5 py-2.5 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-brand-blue">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-1.5">Risiko Bencana</label>
+                                <input type="text" placeholder="Potensi banjir, longsor, gempa, atau risiko lainnya, dll." class="w-full px-3.5 py-2.5 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-brand-blue">
                             </div>
                         </div>
-
-                        <!-- Top 10 Siswa -->
-                        <div class="border border-slate-200 dark:border-slate-700 rounded-xl p-6 bg-white dark:bg-slate-800 shadow-sm hover:shadow-md transition">
-                            <div class="flex justify-between items-start mb-6">
-                                <div>
-                                    <h4 class="font-bold text-slate-800 dark:text-slate-100">Jumlah Siswa (Top 10)</h4>
-                                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Sebaran peserta didik per provinsi</p>
-                                </div>
-                                <i class="ph ph-users text-teal-400 text-xl"></i>
-                            </div>
-                            
-                            <div class="space-y-3 mt-4 text-xs relative pb-6 border-b border-l border-slate-100 dark:border-slate-700 pl-2">
-                                <div class="absolute bottom-0 left-2 right-0 flex justify-between text-[10px] text-slate-400 dark:text-slate-500 pt-1 border-t border-slate-200 dark:border-slate-700">
-                                    <span>0</span><span>2000</span><span>4000</span><span>6000</span><span>8000</span>
-                                </div>
-                                <div class="flex items-center"><span class="w-24 text-right pr-3 font-medium text-slate-600 dark:text-slate-300 uppercase">JAWA TIMUR</span><div class="flex-1 flex items-center"><div class="h-4 bg-brand-cyan hover:bg-blue-600 transition-colors rounded-sm" style="width: 81%"></div><span class="ml-2 font-bold text-slate-800 dark:text-slate-100">6.548</span></div></div>
-                                <div class="flex items-center"><span class="w-24 text-right pr-3 font-medium text-slate-600 dark:text-slate-300 uppercase">JAWA BARAT</span><div class="flex-1 flex items-center"><div class="h-4 bg-brand-cyan hover:bg-blue-600 transition-colors rounded-sm" style="width: 50%"></div><span class="ml-2 font-bold text-slate-800 dark:text-slate-100">4.042</span></div></div>
-                                <div class="flex items-center"><span class="w-24 text-right pr-3 font-medium text-slate-600 dark:text-slate-300 uppercase">JAWA TENGAH</span><div class="flex-1 flex items-center"><div class="h-4 bg-brand-cyan hover:bg-blue-600 transition-colors rounded-sm" style="width: 41%"></div><span class="ml-2 font-bold text-slate-800 dark:text-slate-100">3.333</span></div></div>
-                                <div class="flex items-center"><span class="w-24 text-right pr-3 font-medium text-slate-600 dark:text-slate-300 uppercase truncate">SULAWESI...</span><div class="flex-1 flex items-center"><div class="h-4 bg-brand-cyan hover:bg-blue-600 transition-colors rounded-sm" style="width: 40%"></div><span class="ml-2 font-bold text-slate-800 dark:text-slate-100">3.209</span></div></div>
-                                <div class="flex items-center"><span class="w-24 text-right pr-3 font-medium text-slate-600 dark:text-slate-300 uppercase">ACEH</span><div class="flex-1 flex items-center"><div class="h-4 bg-brand-cyan hover:bg-blue-600 transition-colors rounded-sm" style="width: 20%"></div><span class="ml-2 font-bold text-slate-800 dark:text-slate-100">1.645</span></div></div>
-                            </div>
-                            <div class="text-center mt-4 flex items-center justify-center text-xs text-slate-500 dark:text-slate-400">
-                                <div class="w-2 h-2 rounded-full bg-brand-cyan mr-1.5"></div> Siswa
-                            </div>
-                        </div>
-
-                        <!-- Top 10 Guru -->
-                        <div class="border border-slate-200 dark:border-slate-700 rounded-xl p-6 bg-white dark:bg-slate-800 shadow-sm hover:shadow-md transition">
-                            <div class="flex justify-between items-start mb-6">
-                                <div>
-                                    <h4 class="font-bold text-slate-800 dark:text-slate-100">Jumlah Guru (Top 10)</h4>
-                                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Sebaran guru per provinsi</p>
-                                </div>
-                                <i class="ph ph-graduation-cap text-blue-400 text-xl"></i>
-                            </div>
-                            
-                            <div class="space-y-2.5 mt-4 text-xs relative pb-6 border-b border-l border-slate-100 dark:border-slate-700 pl-2">
-                                <div class="absolute bottom-0 left-2 right-0 flex justify-between text-[10px] text-slate-400 dark:text-slate-500 pt-1 border-t border-slate-200 dark:border-slate-700">
-                                    <span>0</span><span>100</span><span>200</span><span>300</span><span>400</span><span>500</span>
-                                </div>
-                                <div class="flex items-center"><span class="w-28 text-right pr-3 font-medium text-slate-600 dark:text-slate-300 uppercase text-[10px]">JAWA TIMUR</span><div class="flex-1 flex items-center"><div class="h-3.5 bg-brand-cyan rounded-sm" style="width: 87%"></div><span class="ml-2 font-bold text-slate-800 dark:text-slate-100 text-[10px]">439</span></div></div>
-                                <div class="flex items-center"><span class="w-28 text-right pr-3 font-medium text-slate-600 dark:text-slate-300 uppercase text-[10px]">JAWA BARAT</span><div class="flex-1 flex items-center"><div class="h-3.5 bg-brand-cyan rounded-sm" style="width: 62%"></div><span class="ml-2 font-bold text-slate-800 dark:text-slate-100 text-[10px]">310</span></div></div>
-                                <div class="flex items-center"><span class="w-28 text-right pr-3 font-medium text-slate-600 dark:text-slate-300 uppercase text-[10px] truncate">SULAWESI...</span><div class="flex-1 flex items-center"><div class="h-3.5 bg-brand-cyan rounded-sm" style="width: 45%"></div><span class="ml-2 font-bold text-slate-800 dark:text-slate-100 text-[10px]">225</span></div></div>
-                                <div class="flex items-center"><span class="w-28 text-right pr-3 font-medium text-slate-600 dark:text-slate-300 uppercase text-[10px]">JAWA TENGAH</span><div class="flex-1 flex items-center"><div class="h-3.5 bg-brand-cyan rounded-sm" style="width: 39%"></div><span class="ml-2 font-bold text-slate-800 dark:text-slate-100 text-[10px]">197</span></div></div>
-                                <div class="flex items-center"><span class="w-28 text-right pr-3 font-medium text-slate-600 dark:text-slate-300 uppercase text-[10px]">ACEH</span><div class="flex-1 flex items-center"><div class="h-3.5 bg-brand-cyan rounded-sm" style="width: 25%"></div><span class="ml-2 font-bold text-slate-800 dark:text-slate-100 text-[10px]">127</span></div></div>
-                                <div class="flex items-center"><span class="w-28 text-right pr-3 font-medium text-slate-600 dark:text-slate-300 uppercase text-[10px]">SUMATERA UTARA</span><div class="flex-1 flex items-center"><div class="h-3.5 bg-brand-cyan rounded-sm" style="width: 18%"></div><span class="ml-2 font-bold text-slate-800 dark:text-slate-100 text-[10px]">92</span></div></div>
-                                <div class="flex items-center"><span class="w-28 text-right pr-3 font-medium text-slate-600 dark:text-slate-300 uppercase text-[10px] truncate">SUMATERA...</span><div class="flex-1 flex items-center"><div class="h-3.5 bg-brand-cyan rounded-sm" style="width: 15%"></div><span class="ml-2 font-bold text-slate-800 dark:text-slate-100 text-[10px]">77</span></div></div>
-                                <div class="flex items-center"><span class="w-28 text-right pr-3 font-medium text-slate-600 dark:text-slate-300 uppercase text-[10px]">BANTEN</span><div class="flex-1 flex items-center"><div class="h-3.5 bg-brand-cyan rounded-sm" style="width: 12%"></div><span class="ml-2 font-bold text-slate-800 dark:text-slate-100 text-[10px]">60</span></div></div>
-                                <div class="flex items-center"><span class="w-28 text-right pr-3 font-medium text-slate-600 dark:text-slate-300 uppercase text-[10px]">RIAU</span><div class="flex-1 flex items-center"><div class="h-3.5 bg-brand-cyan rounded-sm" style="width: 10%"></div><span class="ml-2 font-bold text-slate-800 dark:text-slate-100 text-[10px]">51</span></div></div>
-                                <div class="flex items-center"><span class="w-28 text-right pr-3 font-medium text-slate-600 dark:text-slate-300 uppercase text-[10px]">KEPULAUAN RIAU</span><div class="flex-1 flex items-center"><div class="h-3.5 bg-brand-cyan rounded-sm" style="width: 10%"></div><span class="ml-2 font-bold text-slate-800 dark:text-slate-100 text-[10px]">50</span></div></div>
-                            </div>
-                            <div class="text-center mt-4 flex items-center justify-center text-xs text-slate-500 dark:text-slate-400">
-                                <div class="w-2 h-2 rounded-full bg-brand-cyan mr-1.5"></div> Guru
-                            </div>
-                        </div>
-
-                        <!-- Top 10 Tendik -->
-                        <div class="border border-slate-200 dark:border-slate-700 rounded-xl p-6 bg-white dark:bg-slate-800 shadow-sm hover:shadow-md transition">
-                            <div class="flex justify-between items-start mb-6">
-                                <div>
-                                    <h4 class="font-bold text-slate-800 dark:text-slate-100">Jumlah Tendik (Top 10)</h4>
-                                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Sebaran tendik per provinsi</p>
-                                </div>
-                                <i class="ph ph-users-three text-orange-400 text-xl"></i>
-                            </div>
-                            
-                            <div class="space-y-2.5 mt-4 text-xs relative pb-6 border-b border-l border-slate-100 dark:border-slate-700 pl-2">
-                                <div class="absolute bottom-0 left-2 right-0 flex justify-between text-[10px] text-slate-400 dark:text-slate-500 pt-1 border-t border-slate-200 dark:border-slate-700">
-                                    <span>0</span><span>500</span><span>1000</span><span>1500</span><span>2000</span>
-                                </div>
-                                <div class="flex items-center"><span class="w-28 text-right pr-3 font-medium text-slate-600 dark:text-slate-300 uppercase text-[10px]">JAWA TIMUR</span><div class="flex-1 flex items-center"><div class="h-3.5 bg-brand-cyan rounded-sm" style="width: 83%"></div><span class="ml-2 font-bold text-slate-800 dark:text-slate-100 text-[10px]">1.662</span></div></div>
-                                <div class="flex items-center"><span class="w-28 text-right pr-3 font-medium text-slate-600 dark:text-slate-300 uppercase text-[10px]">JAWA BARAT</span><div class="flex-1 flex items-center"><div class="h-3.5 bg-brand-cyan rounded-sm" style="width: 66%"></div><span class="ml-2 font-bold text-slate-800 dark:text-slate-100 text-[10px]">1.329</span></div></div>
-                                <div class="flex items-center"><span class="w-28 text-right pr-3 font-medium text-slate-600 dark:text-slate-300 uppercase text-[10px]">JAWA TENGAH</span><div class="flex-1 flex items-center"><div class="h-3.5 bg-brand-cyan rounded-sm" style="width: 54%"></div><span class="ml-2 font-bold text-slate-800 dark:text-slate-100 text-[10px]">1.084</span></div></div>
-                                <div class="flex items-center"><span class="w-28 text-right pr-3 font-medium text-slate-600 dark:text-slate-300 uppercase text-[10px] truncate">SULAWESI...</span><div class="flex-1 flex items-center"><div class="h-3.5 bg-brand-cyan rounded-sm" style="width: 46%"></div><span class="ml-2 font-bold text-slate-800 dark:text-slate-100 text-[10px]">938</span></div></div>
-                                <div class="flex items-center"><span class="w-28 text-right pr-3 font-medium text-slate-600 dark:text-slate-300 uppercase text-[10px]">ACEH</span><div class="flex-1 flex items-center"><div class="h-3.5 bg-brand-cyan rounded-sm" style="width: 27%"></div><span class="ml-2 font-bold text-slate-800 dark:text-slate-100 text-[10px]">544</span></div></div>
-                                <div class="flex items-center"><span class="w-28 text-right pr-3 font-medium text-slate-600 dark:text-slate-300 uppercase text-[10px]">SUMATERA UTARA</span><div class="flex-1 flex items-center"><div class="h-3.5 bg-brand-cyan rounded-sm" style="width: 25%"></div><span class="ml-2 font-bold text-slate-800 dark:text-slate-100 text-[10px]">499</span></div></div>
-                                <div class="flex items-center"><span class="w-28 text-right pr-3 font-medium text-slate-600 dark:text-slate-300 uppercase text-[10px] truncate">SUMATERA...</span><div class="flex-1 flex items-center"><div class="h-3.5 bg-brand-cyan rounded-sm" style="width: 15%"></div><span class="ml-2 font-bold text-slate-800 dark:text-slate-100 text-[10px]">318</span></div></div>
-                                <div class="flex items-center"><span class="w-28 text-right pr-3 font-medium text-slate-600 dark:text-slate-300 uppercase text-[10px]">BANTEN</span><div class="flex-1 flex items-center"><div class="h-3.5 bg-brand-cyan rounded-sm" style="width: 15%"></div><span class="ml-2 font-bold text-slate-800 dark:text-slate-100 text-[10px]">309</span></div></div>
-                                <div class="flex items-center"><span class="w-28 text-right pr-3 font-medium text-slate-600 dark:text-slate-300 uppercase text-[10px] truncate">NUSA TENGGARA...</span><div class="flex-1 flex items-center"><div class="h-3.5 bg-brand-cyan rounded-sm" style="width: 15%"></div><span class="ml-2 font-bold text-slate-800 dark:text-slate-100 text-[10px]">302</span></div></div>
-                                <div class="flex items-center"><span class="w-28 text-right pr-3 font-medium text-slate-600 dark:text-slate-300 uppercase text-[10px] truncate">KALIMANTAN...</span><div class="flex-1 flex items-center"><div class="h-3.5 bg-brand-cyan rounded-sm" style="width: 15%"></div><span class="ml-2 font-bold text-slate-800 dark:text-slate-100 text-[10px]">300</span></div></div>
-                            </div>
-                            <div class="text-center mt-4 flex items-center justify-center text-xs text-slate-500 dark:text-slate-400">
-                                <div class="w-2 h-2 rounded-full bg-brand-cyan mr-1.5"></div> Tendik
-                            </div>
-                        </div>
-
                     </div>
-                </section>
 
-                <footer class="text-center py-10 text-xs text-slate-500 dark:text-slate-400 space-y-1">
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row justify-between items-center gap-4 pt-2 pb-8">
+                        <button type="button" class="w-full sm:w-auto px-5 py-2.5 border border-slate-300 dark:border-slate-600 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition flex items-center justify-center gap-2">
+                            <i class="ph ph-arrow-left"></i> Kembali
+                        </button>
+                        
+                        <div class="flex flex-wrap items-center gap-3 w-full sm:w-auto">
+                            <button type="button" class="flex-1 sm:flex-none px-5 py-2.5 border border-slate-300 dark:border-slate-600 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition flex items-center justify-center gap-2">
+                                <i class="ph ph-x"></i> Batal
+                            </button>
+                            <button type="button" class="flex-1 sm:flex-none px-5 py-2.5 bg-slate-700 hover:bg-slate-800 text-white rounded-xl text-sm font-medium transition flex items-center justify-center gap-2 shadow-sm">
+                                <i class="ph ph-floppy-disk"></i> Simpan Draft
+                            </button>
+                            <button type="submit" class="w-full sm:w-auto px-6 py-2.5 bg-brand-blue hover:bg-blue-600 text-white rounded-xl text-sm font-medium transition flex items-center justify-center gap-2 shadow-sm">
+                                <i class="ph ph-paper-plane-tilt"></i> Ajukan Usulan
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+
+                <footer class="text-center py-6 text-xs text-slate-500 dark:text-slate-400 space-y-1">
                     <p>&copy; 2026 Kementerian Sosial Republik Indonesia</p>
                     <p>SETARA - Sistem Edukasi Terpadu Sekolah Rakyat</p>
                 </footer>
-                
             </div>
         </div>
         
@@ -1018,42 +849,48 @@
 
             // Chart 1: Peserta Didik
             const ctxPeserta = document.getElementById('chartPeserta').getContext('2d');
-            new Chart(ctxPeserta, {
-                ...donutConfig,
-                data: {
-                    labels: ['Laki-laki', 'Perempuan'],
-                    datasets: [{
-                        data: [18304, 17793],
-                        backgroundColor: [colorMale, colorFemale],
-                    }]
-                }
-            });
+            if(ctxPeserta) {
+                new Chart(ctxPeserta, {
+                    ...donutConfig,
+                    data: {
+                        labels: ['Laki-laki', 'Perempuan'],
+                        datasets: [{
+                            data: [18304, 17793],
+                            backgroundColor: [colorMale, colorFemale],
+                        }]
+                    }
+                });
+            }
 
             // Chart 2: Guru
             const ctxGuru = document.getElementById('chartGuru').getContext('2d');
-            new Chart(ctxGuru, {
-                ...donutConfig,
-                data: {
-                    labels: ['Laki-laki', 'Perempuan'],
-                    datasets: [{
-                        data: [842, 1739],
-                        backgroundColor: [colorMale, colorFemale],
-                    }]
-                }
-            });
+            if(ctxGuru) {
+                new Chart(ctxGuru, {
+                    ...donutConfig,
+                    data: {
+                        labels: ['Laki-laki', 'Perempuan'],
+                        datasets: [{
+                            data: [842, 1739],
+                            backgroundColor: [colorMale, colorFemale],
+                        }]
+                    }
+                });
+            }
 
             // Chart 3: Tendik
             const ctxTendik = document.getElementById('chartTendik').getContext('2d');
-            new Chart(ctxTendik, {
-                ...donutConfig,
-                data: {
-                    labels: ['Laki-laki', 'Perempuan'],
-                    datasets: [{
-                        data: [6362, 4249],
-                        backgroundColor: [colorMale, colorFemale],
-                    }]
-                }
-            });
+            if(ctxTendik) {
+                new Chart(ctxTendik, {
+                    ...donutConfig,
+                    data: {
+                        labels: ['Laki-laki', 'Perempuan'],
+                        datasets: [{
+                            data: [6362, 4249],
+                            backgroundColor: [colorMale, colorFemale],
+                        }]
+                    }
+                });
+            }
         });
     </script>
 </body>
